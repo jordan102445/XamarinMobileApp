@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.MenuSposnorsPage"
+              Title="Нашите партнери"
+             >
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="Frenchfries.jpg"/>
+    </ContentPage.BackgroundImageSource>
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+
+
+                
+
+                <Frame CornerRadius="10" BorderColor="Green" BackgroundColor="White" Padding="10" Margin="10">
+
+                    <Label x:Name="DisplayUsernameLabel"
+                            FontSize="18"
+                            FontAttributes="Bold,Italic"
+                            HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                            Margin="10"
+                             TextColor="Green" >
+
+                    </Label>
+
+                </Frame>
+
+
+
+
+
+
+
+
+
+                <Grid>
+
+
+
+                    <Label Text="DeliciousApp"
+                        FontSize="24"
+                        TextColor="Green"
+                         HorizontalOptions="Center"
+                           FontAttributes="Bold,Italic" 
+                            Margin="5"
+                       
+                        
+                           
+                            
+                                />
+
+                </Grid>
+
+
+                <Grid RowDefinitions="Auto,Auto">
+
+                    <ImageButton Source="dunkingdonuts.png"
+                    Clicked="DunkinDonatsClicked"
+                    
+                        WidthRequest="170"
+                         HeightRequest="80"
+                        BorderColor="Silver"
+                   
+                    BackgroundColor="Pink"
+                    CornerRadius="30"
+                     Padding="10"
+                     Margin="10"
+                     HorizontalOptions="StartAndExpand"
+                      x:Name="dunkindonuts"
+                        >
+                        
+                    </ImageButton>
+
+                    <ImageButton
+                   Source="wendys.png"
+                    Clicked="WendysClicked"
+                        WidthRequest="170"
+                    HeightRequest="80"
+                    BorderColor="Silver"
+                    BackgroundColor="#FF7F7F "
+                    CornerRadius="30"
+                    Padding="10"
+                    Margin="10"
+                    HorizontalOptions="EndAndExpand"
+                    x:Name="wendy"
+                   >
+
+                       
+                    </ImageButton>
+
+                </Grid>
+
+
+                <Grid RowDefinitions="Auto,Auto">
+                    <ImageButton
+                      Source="tacobell.png" 
+                       Clicked="TacoBellClicked" 
+                        WidthRequest="170"
+                        HeightRequest="80"
+                        BorderColor="Silver"
+                        BackgroundColor="Purple"
+                        CornerRadius="30"
+                        Padding="10"
+                        Margin="10"
+                        HorizontalOptions="StartAndExpand"
+                        x:Name="tacobell"
+                            >
+                       
+                    </ImageButton>
+
+                    <ImageButton 
+                    Source="bking.png"
+                    Clicked="BurgerKingClicked"
+                       WidthRequest="170"
+                        HeightRequest="80"
+                        BorderColor="Silver"
+                         
+                            BackgroundColor="Orange"
+                            CornerRadius="30"
+                             Padding="10"
+                            Margin="10"
+                            HorizontalOptions="EndAndExpand"
+                         x:Name="burgerking"
+       >
+                        
+                    </ImageButton>
+
+                </Grid>
+
+                <Grid RowDefinitions="Auto,Auto">
+
+                    <ImageButton
+            Source="kfc.png"
+             Clicked="KfcClicked"
+              
+             
+                        WidthRequest="170"
+                         HeightRequest="80"
+                         BorderColor="Silver"
+                         BackgroundColor="#F3E8EA"
+                            CornerRadius="30"
+                             Padding="10"
+                             Margin="10"
+                            HorizontalOptions="StartAndExpand"
+                              x:Name="kfc"
+               
+>   
+                        
+                    </ImageButton>
+
+                    <ImageButton
+                     Source="mc.png" 
+                     Clicked="McDonaldClicked"
+                             
+                            WidthRequest="170"
+                            HeightRequest="80"
+                            BorderColor="Silver"
+                            BackgroundColor="Red"
+                            CornerRadius="30"
+                            Padding="10"
+                            Margin="10"
+                            HorizontalOptions="EndAndExpand"
+                             x:Name="mcdonal"
+                            >
+                        
+                        
+                    </ImageButton>
+
+                </Grid>
+
+                <Grid RowDefinitions="Auto,Auto">
+
+                    <ImageButton
+            Source="starbucks.png"
+             Clicked="StarbucksClicked"
+              
+             
+                WidthRequest="170"
+                 HeightRequest="80"
+                 BorderColor="Silver"
+                  BackgroundColor="#D9D9CC"
+                  CornerRadius="30"
+                    Padding="10"
+                    Margin="10"
+                  HorizontalOptions="StartAndExpand"
+                        
+                        x:Name="starbucks"
+               
+>
+
+                    </ImageButton>
+
+                    <ImageButton
+                     Source="papajhons.png" 
+                     Clicked="PapaJhonsClicked"
+                             
+                            WidthRequest="170"
+                            HeightRequest="80"
+                            BorderColor="Silver"
+                            BackgroundColor="White"
+                            CornerRadius="30"
+                            Padding="10"
+                            Margin="10"
+                            HorizontalOptions="EndAndExpand"
+                             x:Name="papajhons"
+                            >
+
+
+                    </ImageButton>
+
+                </Grid>
+
+                <Grid RowDefinitions="Auto,Auto">
+
+                    <ImageButton
+            Source="pizzahut.png"
+             Clicked="PizzHut"
+              
+             
+                WidthRequest="170"
+                 HeightRequest="80"
+                 BorderColor="Silver"
+                  BackgroundColor="Yellow"
+                  CornerRadius="30"
+                    Padding="10"
+                    Margin="10"
+                  HorizontalOptions="StartAndExpand"
+                        
+                        x:Name="pizzahut"
+               
+>
+
+                    </ImageButton>
+
+                    <ImageButton
+                     Source="dairyqueen.png" 
+                     Clicked="DairyQueenClicked"
+                             
+                            WidthRequest="170"
+                            HeightRequest="80"
+                            BorderColor="Silver"
+                            BackgroundColor="Blue"
+                            CornerRadius="30"
+                            Padding="10"
+                            Margin="10"
+                            HorizontalOptions="EndAndExpand"
+                             x:Name="dairyqueen"
+                            >
+
+
+                    </ImageButton>
+
+                </Grid>
+                <Grid RowDefinitions="Auto,Auto">
+
+                    <ImageButton
+            Source="sonic.png"
+             Clicked="SonicClicked"
+              
+             
+                WidthRequest="170"
+                 HeightRequest="80"
+                 BorderColor="Silver"
+                  BackgroundColor="#f2ba49"
+                  CornerRadius="30"
+                    Padding="10"
+                    Margin="10"
+                  HorizontalOptions="StartAndExpand"
+                        x:Name="sonic"
+               
+>
+
+                    </ImageButton>
+
+                    <ImageButton
+                     Source="dominospizza.png" 
+                     Clicked="DominosClicked"
+                             
+                            WidthRequest="170"
+                            HeightRequest="80"
+                            BorderColor="Silver"
+                            BackgroundColor="Red"
+                            CornerRadius="30"
+                            Padding="10"
+                            Margin="10"
+                            HorizontalOptions="EndAndExpand"
+                             x:Name="dominos"
+                            >
+
+
+                    </ImageButton>
+
+                </Grid>
+
+
+                <Button Text="ОДЈАВИ СЕ"
+                    TextColor="White"
+                    BackgroundColor="Green"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                     FontAttributes="Bold"
+                     FontSize="24"
+                     Padding="25"
+                     Margin="100"
+                      CornerRadius="100"
+                        Clicked="Logout" />
+
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

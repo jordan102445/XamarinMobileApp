@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Register"
+              Title="Регистрирајте се">
+    <ContentPage.Content>
+        <Grid>
+
+            <Image Source="loginpicc2.jpeg" Aspect="Fill" />
+            <Label Text="РЕГИСТРИРАЈ СЕ"  
+            
+                FontSize="35"
+                TextColor="Green"
+                HorizontalOptions="Center"
+                FontAttributes="Bold,Italic"  
+                Margin="8,10"
+    
+     
+                 />
+
+
+
+            <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="#8090EE90" Padding="20" Spacing="10"  HeightRequest="515">
+
+                <Image Source="icon.png" HorizontalOptions="Center" VerticalOptions="Center"  WidthRequest="70" HeightRequest="90" />
+
+                <Label Text="Корисничко име" TextColor="Black" FontSize="Large" FontAttributes="Italic" />
+                <Entry Placeholder="Внесете корисничко име" FontSize="18" PlaceholderColor="Black"  Opacity="0.4" x:Name="Username"/>
+                <Label Text="Емаил" TextColor="Black" FontSize="Large" FontAttributes="Italic" />
+                <Entry Placeholder="Внесете емаил"  FontSize="18" PlaceholderColor="Black"  Opacity="0.4" x:Name="Email"/>
+                <Label Text="Лозинка" TextColor="Black" FontSize="Large" FontAttributes="Italic"  />
+                <Entry Placeholder="Внесете лозинка" IsPassword="True" PlaceholderColor="Black" FontSize="18" Opacity="0.4" x:Name="Password"/>
+                <Entry Placeholder="Потврдете ја лозинката" IsPassword="True" PlaceholderColor="Black" FontSize="18" Opacity="0.4" x:Name="ConfirmPassword" />
+                   <Button Text="РЕГИСТРИРАЈ СЕ" 
+                    TextColor="Green" 
+                    HorizontalOptions="Center" 
+                    FontAttributes="Bold" 
+                    FontSize="18" 
+                    Margin="10" 
+                    BorderColor="Silver"
+                    CornerRadius="60"
+                    WidthRequest="150"
+                    HeightRequest="80"
+                    Clicked="POST_Clicked"
+        
+         
+         />
+
+
+               
+
+
+
+
+
+
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

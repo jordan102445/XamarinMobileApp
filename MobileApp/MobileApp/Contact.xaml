@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Contact"
+             Title="Контактирајте не">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="Контактирајте не" FontSize="Title" HorizontalOptions="Center" Margin="0,20,0,10" />
+
+            <Entry Placeholder="Вашето име" x:Name="NameEntry" />
+            <Entry Placeholder="Вашето презиме" x:Name="LastNameEntry" />
+            <Entry Placeholder="Предмет" x:Name="SubjectEntry" />
+            <Editor Placeholder="Вашата порака до вас" x:Name="MessageEditor" HeightRequest="100" />
+
+            <Button Text="Прати" Clicked="Button_Clicked" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

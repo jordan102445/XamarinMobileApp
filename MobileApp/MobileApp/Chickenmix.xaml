@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="Delicious_app.Chickenmix"
+              Title="Мени за Пилешко месо "
+             >
+    <ContentPage.BackgroundImageSource>
+
+        <FileImageSource File="chickenwal.jpg"/>
+
+    </ContentPage.BackgroundImageSource>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#fed8b1"/>
+                <Setter Property="BorderColor" Value="LightGoldenrodYellow"/>
+                <Setter Property="Margin" Value="20"/>
+                <Setter Property="CornerRadius" Value="15"/>
+
+            </Style>
+
+
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="0,2"/>
+                <Setter Property="FontAttributes" Value="Italic"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+
+            <Style x:Key="headerLabel" TargetType="Label">
+                <Setter Property="Margin" Value="0, 8"/>
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+            <Style TargetType="Image">
+                <Setter Property="FlexLayout.Order" Value="-1"/>
+                <Setter Property="FlexLayout.AlignSelf" Value="Center"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Text" Value="ПОРАЧАЈ"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="Black"/>
+                <Setter Property="BorderRadius" Value="20"/>
+
+            </Style>
+
+        </ResourceDictionary>
+
+
+
+
+
+    </ContentPage.Resources>
+
+
+
+
+
+    <StackLayout>
+
+        <Frame CornerRadius="10" BorderColor="Green" BackgroundColor="White" Padding="10" Margin="10">
+            <Label x:Name="usernamelabel" FontSize="24" TextColor="Green"
+    HorizontalTextAlignment="Center"
+    VerticalTextAlignment="Center"
+    >
+
+
+            </Label>
+        </Frame>
+
+
+        <SearchBar TextColor="Black" PlaceholderColor="#CCCCCC"
+ BackgroundColor="#F5F5F5" CancelButtonColor="#FF0000"
+     FontSize="16" Placeholder="Search..."
+     TextChanged="SearchBar_TextChanged"></SearchBar>
+
+
+        <ScrollView Orientation="Both" >
+
+
+
+
+        <FlexLayout Wrap="Wrap" x:Name="ChickenFlexLayout">
+
+
+            <Frame WidthRequest="300"
+               HeightRequest="480"
+                   
+                   x:Name="Chickenwings"
+                   >
+
+                <FlexLayout Direction="Column">
+                        <Label Text="Пилешки крилца" VerticalOptions="CenterAndExpand"
+                       Style="{StaticResource headerLabel}"/>
+                    <Label Text="Видови :" />
+                    <RadioButton Content="&#x2023; Крцкави пилешки крилца" x:Name="crispi"/>
+                    <RadioButton Content="&#x2023; Пилешки крилца со мед и лук" x:Name="medlukchicken"/>
+                    <RadioButton Content="&#x2023; Љути пилешки крилца" x:Name="ljutipileskikrilca" />
+                        <Label Text="&#x2022; Број на нарачка :31" x:Name="BROJ31chickenwings" />
+                        <Label Text="&#x2022; Цена:300 ден" />
+                    <Image Source="wings.jpeg" Aspect="Fill"
+                       WidthRequest="240"
+                       HeightRequest="170"/>
+                    <Label FlexLayout.Grow="1" />
+                    <Button Clicked="Button_Clicked"/>
+                </FlexLayout>
+
+
+            </Frame>
+
+
+            <Frame WidthRequest="300"
+               HeightRequest="400"
+                   
+                   x:Name="Chickenbreasts"
+                   >
+
+                <FlexLayout  Direction="Column">
+                        <Label Text="Пилешки гради" VerticalOptions="CenterAndExpand"
+                    Style="{StaticResource headerLabel}" x:Name="chickenbreastss"/>
+                        <Label Text="&#x2022; Број на нарачка :32" x:Name="BROJ32chickenbreasts" />
+                        <Label Text="&#x2022; Цена:280 ден" />
+                    <Image Source="chickenbreast.jpg" Aspect="Fill"
+                 WidthRequest="240"
+                 HeightRequest="200"/>
+                    <Label FlexLayout.Grow="1" />
+                    <Button Clicked="Button_Clicked_1"/>
+                </FlexLayout>
+            </Frame>
+
+            <Frame WidthRequest="300"
+               HeightRequest="480"
+                   x:Name="Chickendrumsticks"
+                   >
+
+                <FlexLayout Direction="Column">
+                        <Label Text="Пилешки батаци" VerticalOptions="CenterAndExpand"
+                Style="{StaticResource headerLabel}"/>
+                    <Label Text="Видови :" />
+                    <RadioButton Content="&#x2023; Батаци од кокошка" x:Name="sokokoska"/>
+                    <RadioButton Content="&#x2023; Батаци од Мисирка" x:Name="somisirka"/>
+                    <RadioButton Content="&#x2023; Батаци од Патка" x:Name="sopatka"/>
+                        <Label Text="&#x2022; Број на нарачка :33" x:Name="BROJ33chickendrumsticks" />
+                        <Label Text="&#x2022; Цена:230 ден" />
+                    <Image Source="drumsticks.jpg" Aspect="Fill"
+                    WidthRequest="240"
+                    HeightRequest="170"/>
+                    <Label FlexLayout.Grow="1" />
+                    <Button Clicked="Button_Clicked_2"/>
+                </FlexLayout>
+            </Frame>
+
+
+            <Frame WidthRequest="300"
+               HeightRequest="400"
+                   
+                   x:Name="Chickenribs"
+                   >
+
+                <FlexLayout Direction="Column">
+                        <Label Text="Пилешки ребра" VerticalOptions="CenterAndExpand"
+                     Style="{StaticResource headerLabel}" x:Name="chickenribss"/>
+                        <Label Text="&#x2022; Број на нарачка :34" x:Name="BROJ34chickenribs" />
+                        <Label Text="&#x2022; Цена:300 ден" />
+                    <Image Source="chickenribs.jpg" Aspect="Fill"
+                    WidthRequest="240"
+                    HeightRequest="170"/>
+                    <Label FlexLayout.Grow="1" />
+                    <Button Clicked="Button_Clicked_3"/>
+                </FlexLayout>
+            </Frame>
+
+            <Frame WidthRequest="300"
+                HeightRequest="420"
+                   
+                   x:Name="Chickenthighs"
+                   >
+
+                <FlexLayout Direction="Column">
+                        <Label Text="Пилешки бедра" VerticalOptions="CenterAndExpand"
+                Style="{StaticResource headerLabel}" x:Name="chickenthighss"/>
+                        <Label Text="&#x2022; Број на нарачка :35" x:Name="BROJ35chickenthighs" />
+                        <Label Text="&#x2022; Цена:320 ден" />
+                    <Image Source="thights.jpg" Aspect="Fill"
+                    WidthRequest="240"
+                    HeightRequest="170"/>
+                    <Label FlexLayout.Grow="1" />
+                    <Button Clicked="Button_Clicked_4"/>
+                </FlexLayout>
+            </Frame>
+
+
+            
+
+
+
+
+
+        </FlexLayout>
+
+
+
+
+
+    </ScrollView>
+
+    </StackLayout>
+</ContentPage>

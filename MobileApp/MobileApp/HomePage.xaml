@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.HomePage"
+              Title="Нашето Мени"
+             >
+
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="Frenchfries.jpg"/>
+    </ContentPage.BackgroundImageSource>
+    <ContentPage.Content>
+       
+        <ScrollView>
+            <StackLayout>
+
+                
+
+                <Frame CornerRadius="10" BorderColor="Green" BackgroundColor="White" Padding="10" Margin="10">
+
+                    <Label x:Name="DisplayUsernameLabel"
+                            FontSize="18"
+                            FontAttributes="Bold,Italic"
+                            HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                            Margin="10"
+                             TextColor="Green" >
+                    
+                    </Label>
+                    
+                </Frame>
+
+                
+
+
+
+
+
+
+
+                <Grid>
+               
+                    
+
+                <Label Text="DeliciousApp"
+                        FontSize="24"
+                        TextColor="Green"
+                         HorizontalOptions="Center"
+                           FontAttributes="Bold,Italic" 
+                            Margin="5"
+                       
+                        
+                           
+                            
+                                />
+                    
+                    </Grid>
+
+
+                <Grid RowDefinitions="Auto,Auto">
+
+                    <Button Text="Пица" 
+                    Clicked="Button_Clicked"
+                    FontAttributes="Italic"
+                     FontSize="Large"
+                     WidthRequest="170"
+                    HeightRequest="80"
+                     BorderColor="Silver"
+                    TextColor="Black"
+                    BackgroundColor="Orange"
+                    CornerRadius="30"
+                     Padding="10"
+                     Margin="10"
+                     HorizontalOptions="StartAndExpand"
+                            
+                            x:Name="pizzbutton"
+                      
+                        >
+                        <Button.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS">Arial-BoldMT</On>
+                                <On Platform="Android">sans-serif-black</On>
+                                <On Platform="UWP">Segoe UI Black</On>
+                            </OnPlatform>
+                        </Button.FontFamily>
+                    </Button>
+
+                    <Button
+                    Text="Месо" 
+                    Clicked="Button_Clicked_1"
+                    FontAttributes="Italic"
+                    FontSize="Large"
+                    WidthRequest="170"
+                    HeightRequest="80"
+                    BorderColor="Silver"
+                    TextColor="Black"
+                    BackgroundColor="#FF7F7F "
+                    CornerRadius="30"
+                    Padding="10"
+                    Margin="10"
+                    HorizontalOptions="EndAndExpand"
+                        
+                        x:Name="meat"
+                    
+                   >
+
+                        <Button.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS">Arial-BoldMT</On>
+                                <On Platform="Android">sans-serif-black</On>
+                                <On Platform="UWP">Segoe UI Black</On>
+                            </OnPlatform>
+                        </Button.FontFamily>
+                    </Button>
+
+                </Grid>
+
+
+                <Grid RowDefinitions="Auto,Auto">
+                    <Button
+                      Text="Десерти" 
+                       Clicked="Button_Clicked_2"
+                       FontAttributes="Italic"
+                       FontSize="Large"
+                        WidthRequest="170"
+                        HeightRequest="80"
+                        BorderColor="Silver"
+                        TextColor="Black"
+                        BackgroundColor="#C4A484"
+                        CornerRadius="30"
+                        Padding="10"
+                        Margin="10"
+                        HorizontalOptions="StartAndExpand"
+                        
+                        x:Name="dessert"
+                        
+                            >
+                        <Button.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS">Arial-BoldMT</On>
+                                <On Platform="Android">sans-serif-black</On>
+                                <On Platform="UWP">Segoe UI Black</On>
+                            </OnPlatform>
+                        </Button.FontFamily>
+                    </Button>
+
+                    <Button 
+                    Text="Бургери" 
+                    Clicked="Button_Clicked_3"
+                     FontAttributes="Italic"
+                      FontSize="Large"
+                       WidthRequest="170"
+                        HeightRequest="80"
+                        BorderColor="Silver"
+                          TextColor="Black"
+                        BackgroundColor="#aa4203"
+                         CornerRadius="30"
+                           Padding="10"
+                           Margin="10"
+                         HorizontalOptions="EndAndExpand"
+                        x:Name="burger"
+                         
+       >
+                        <Button.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS">Arial-BoldMT</On>
+                                <On Platform="Android">sans-serif-black</On>
+                                <On Platform="UWP">Segoe UI Black</On>
+                            </OnPlatform>
+                        </Button.FontFamily>
+                    </Button>
+
+                </Grid>
+
+                <Grid RowDefinitions="Auto,Auto">
+
+                    <Button 
+             Text="Пијалоци" 
+             Clicked="Button_Clicked_4"
+              FontAttributes="Italic"
+               FontSize="Large"
+                WidthRequest="170"
+                 HeightRequest="80"
+                 BorderColor="Silver"
+                   TextColor="Black"
+                 BackgroundColor="#FFD580"
+                  CornerRadius="30"
+                    Padding="10"
+                    Margin="10"
+                  HorizontalOptions="StartAndExpand"
+                        
+                        x:Name="drinks"
+                  
+>
+                <Button.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS">Arial-BoldMT</On>
+                        <On Platform="Android">sans-serif-black</On>
+                        <On Platform="UWP">Segoe UI Black</On>
+                    </OnPlatform>
+                </Button.FontFamily>
+            </Button>
+
+                <Button
+                    Text="Пилешко" 
+                     Clicked="Button_Clicked_5"
+                             FontAttributes="Italic"
+                             FontSize="Large"
+                            WidthRequest="170"
+                            HeightRequest="80"
+                            BorderColor="Silver"
+                            TextColor="Black"
+                            BackgroundColor="#BC9229"
+                            CornerRadius="30"
+                            Padding="10"
+                            Margin="10"
+                             HorizontalOptions="EndAndExpand"
+                             x:Name="chicken"
+                            >
+                    <Button.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS">Arial-BoldMT</On>
+                            <On Platform="Android">sans-serif-black</On>
+                            <On Platform="UWP">Segoe UI Black</On>
+                        </OnPlatform>
+                    </Button.FontFamily>
+                </Button>
+
+                </Grid>
+
+
+                <Button Text="ОДЈАВИ СЕ"
+                    TextColor="White"
+                    BackgroundColor="Green"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                     FontAttributes="Bold"
+                     FontSize="24"
+                     Padding="25"
+                     Margin="100"
+                      CornerRadius="100"
+                        Clicked="LOGOUT" />
+
+                
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

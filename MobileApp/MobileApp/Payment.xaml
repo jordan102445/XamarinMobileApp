@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup  
+                xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:xct ="http://xamarin.com/schemas/2020/toolkit"
+                Size ="560,560"
+                x:Class="Delicious_app.Payment"
+    
+    >
+
+    <ScrollView>
+        <StackLayout Spacing="10" xct:CornerRadiusEffect.CornerRadius="60">
+
+            
+                <Label x:Name="usernamelabel" FontSize="Body" TextColor="Black"
+                 HorizontalTextAlignment="Start"
+                VerticalTextAlignment="Start"
+                       FontAttributes="Italic"
+                       
+                                            />
+           
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="0" Orientation="Horizontal">
+                    <Image Source="visa.png" WidthRequest="100" HeightRequest="100" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" />
+                    <Image Source="mastercard.png" WidthRequest="100" HeightRequest="100" HorizontalOptions="EndAndExpand"  VerticalOptions="EndAndExpand"/>
+                </StackLayout>
+            </Grid>
+
+
+
+            <Label Text="Име" TextColor="#333333" FontSize="Medium" FontAttributes="Bold" />
+                <Entry Placeholder="Внесете име" TextColor="#000000" PlaceholderColor="#A0A0A0" x:Name="name" />
+
+                <Label Text="Презиме" TextColor="#333333" FontSize="Medium" FontAttributes="Bold" />
+                <Entry Placeholder="Внесете презиме" TextColor="#000000" PlaceholderColor="#A0A0A0" x:Name="lastname" />
+
+                <Label Text="Број на картичка" TextColor="#333333" FontSize="Medium" FontAttributes="Bold" />
+                <Entry Placeholder="Внесете го бројот на картичка" TextColor="#000000" PlaceholderColor="#A0A0A0" x:Name="cardnumber" />
+
+                <Label Text="CVC код" TextColor="#333333" FontSize="Medium" FontAttributes="Bold" />
+                <Entry Placeholder="Внесете CVC код" IsPassword="True" TextColor="#000000" PlaceholderColor="#A0A0A0" x:Name="cvc" />
+
+                    <Label Text="Датум на истекување" TextColor="#333333" FontSize="Medium" FontAttributes="Bold" />
+
+                  <DatePicker  TextColor="#000000"  x:Name="dmy" Format="yyyy-MM-dd" />
+            
+                    <Label Text="Адреса" TextColor="#333333" FontSize="Medium" FontAttributes="Bold" />
+            
+                    <Entry Placeholder="Внесете адреса"  TextColor="#000000" PlaceholderColor="#A0A0A0" x:Name="address" />
+            
+                    <Label Text="Телефонски број" TextColor="#333333" FontSize="Medium" FontAttributes="Bold" />
+
+                     <Entry Placeholder="Внесете телефонски број"  TextColor="#000000" PlaceholderColor="#A0A0A0" x:Name="telbroj" />
+
+
+
+            <Button
+                Text="Плати"
+                FontAttributes="Bold"
+                 FontSize="24"
+                 CornerRadius="20"
+                 HeightRequest="80"
+                 WidthRequest="160" 
+                BackgroundColor="#007bff"
+                TextColor="White" 
+                HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
+                    Margin="30"
+                Clicked="Button_Clicked"
+    />
+
+       
+
+    </StackLayout>
+
+    </ScrollView>
+
+
+</xct:Popup>

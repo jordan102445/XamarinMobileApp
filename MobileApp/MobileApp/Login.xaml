@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="MobileApp.Login"
+              Title="Најавете се"
+             >
+    <ContentPage.Content>
+        
+        <Grid>
+            
+            <Image Source="loginpicc2.jpeg" Aspect="Fill" />
+            <Label Text="НАЈАВИ СЕ"
+                   
+                    FontSize="40"
+                    TextColor="Green"
+                     HorizontalOptions="Center"
+                     FontAttributes="Bold,Italic"  
+                     Margin="60"
+           
+            
+                        />
+
+
+
+
+
+            <StackLayout VerticalOptions="CenterAndExpand" BackgroundColor="#8090EE90" Padding="20" Spacing="10">
+
+                <Image Source="icon.png" HorizontalOptions="Center" VerticalOptions="Center"  WidthRequest="100" HeightRequest="120" />
+
+
+
+
+
+                <Label Text="Корисничко име" TextColor="Black" FontSize="Large" FontAttributes="Italic" />
+                <Entry Placeholder="Внесете корисничко име" FontSize="18" PlaceholderColor="Black"  Opacity="0.4" x:Name="Username"/>
+                <Label Text="Лозинка" TextColor="Black" FontSize="Large" FontAttributes="Italic" />
+                <Entry Placeholder="Внесете лозинка" IsPassword="True" PlaceholderColor="Black" FontSize="18" Opacity="0.4" x:Name="Password"/>
+                
+                <Grid RowDefinitions="Auto,Auto">
+                    <Button Text="НАЈАВА" 
+                TextColor="Green" 
+                HorizontalOptions="StartAndExpand" 
+                FontAttributes="Bold" 
+                FontSize="18" 
+                Margin="10" 
+                BorderColor="Silver"
+                CornerRadius="60"
+                WidthRequest="150"
+                HeightRequest="80"
+                Clicked="Button_Clicked_1"
+                        ></Button>
+
+
+                
+                <Button Text="РЕГИСТРАЦИЈА" 
+                TextColor="Green" 
+                 HorizontalOptions="EndAndExpand" 
+                FontAttributes="Bold" 
+                FontSize="18" 
+                Margin="10" 
+                BorderColor="Silver"
+                CornerRadius="60"
+                WidthRequest="150"
+                HeightRequest="80"
+                Clicked="Button_Clicked_2"
+                        ></Button>
+
+                </Grid>
+
+
+
+
+
+
+
+
+
+            </StackLayout>
+            
+
+        </Grid>
+
+        
+            
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.ShowPage"
+             Title="Дома"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+
+
+
+
+            <Grid BackgroundColor="#555555" WidthRequest="220" HeightRequest="200">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image Source="icon.png" WidthRequest="500" HeightRequest="170" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                <Grid ColumnDefinitions="Auto,Auto">
+
+
+                    <Image Source="bking.png" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="60"/>
+                    <Image Source="kfc.png" Grid.Row="1" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="60"/>
+                    <Image Source="mc.png" Grid.Row="2" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="60" />
+                    <Image Source="dairyqueen.png" Grid.Column="1" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="60"/>
+                    <Image Source="tacobell.png" Grid.Row="1" Grid.Column="1" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="60"/>
+                    <Image Source="dominospizza.png" Grid.Row="2" Grid.Column="1" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="60"/>
+
+                    <Image Source="wendys.png" Grid.Column="5" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="60"/>
+                    <Image Source="starbucks.png" Grid.Row="2" Grid.Column="4" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="60"/>
+                    <Image Source="dunkingdonuts.png" Grid.Row="1" Grid.Column="4" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="60"/>
+                    <Image Source="papajhons.png"  Grid.Column="4" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="100" HeightRequest="100"/>
+                    <Image Source="sonic.png"  Grid.Row="2" Grid.Column="5" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="60"/>
+                    <Image Source="pizzahut.png"  Grid.Row="1" Grid.Column="5" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" WidthRequest="60"/>
+
+
+                </Grid>
+
+
+            </Grid>
+
+
+
+
+            <Grid RowDefinitions="Auto" >
+
+                <Label Text="DeliciousApp"
+                        FontSize="24"
+                    TextColor="Green"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    FontAttributes="Bold,Italic" 
+                    Margin="5"
+                    />
+            </Grid>
+
+            <ScrollView>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+
+
+                    <Label Text="Нашата Приказна:" TextColor="Black" FontSize="20" Grid.Row="0" FontAttributes="Bold,Italic">
+                    </Label>
+
+                    <Label Text="На DeliciousApp веруваме дека храната не е само за задоволување на гладот, туку за создавање незаборавни спомени. Нашата приказна започна со заедничка љубов кон вкусните кујни и визија да ги поврземе ентузијасти за храната со нивните омилени ресторани без напречни работи. Од своето настанување, се стремиме да го преодиме начинот на кој луѓето откриваат, нарачуваат и уживаат во своите омилени јадења."
+              FontSize="17"
+              TextColor="Black"
+              Grid.Row="1">
+                    </Label>
+
+                    <Label Text="Имаме огромна чест да соработуваме со некои од најпознатите имиња во храната. Нашиот почитуван списоќ на спонзори вклучува ги:"
+               FontSize="17"
+               TextColor="Black"
+               Grid.Row="2" />
+
+                    <StackLayout Grid.Row="3" Spacing="5" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="mc.png" HeightRequest="30" WidthRequest="30" />
+                            <Label Text="McDonald's" FontSize="17" TextColor="Black" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="kfc.png" HeightRequest="30" WidthRequest="30" />
+                            <Label Text="KFC" FontSize="17" TextColor="Black" Grid.Column="1" />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="bking.png" HeightRequest="30" WidthRequest="30" />
+                            <Label Text="Burger King" FontSize="17" TextColor="Black" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="tacobell.png" HeightRequest="30" WidthRequest="30" />
+                            <Label Text="Taco Bell" FontSize="17" TextColor="Black" Grid.Column="1" />
+                        </Grid>
+
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="dunkingdonuts.png" HeightRequest="30" WidthRequest="30" Grid.Column="0" />
+                            <Label Text="Dunking Donuts" FontSize="17" TextColor="Black" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+
+
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="dairyqueen.png" HeightRequest="30" WidthRequest="30" />
+                            <Label Text="Dairy Queen" FontSize="17" TextColor="Black" Grid.Column="1" />
+                        </Grid>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="wendys.png" HeightRequest="30" WidthRequest="30"  />
+                            <Label Text="Wendy's" FontSize="17" TextColor="Black" Grid.Column="1"  />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="dominospizza.png" HeightRequest="30" WidthRequest="30"  />
+                            <Label Text="Dominos Pizza" FontSize="17" TextColor="Black" Grid.Column="1"  />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="papajhons.png" HeightRequest="30" WidthRequest="30"  />
+                            <Label Text="Papa Jhons" FontSize="17" TextColor="Black" Grid.Column="1"  />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="pizzahut.png" HeightRequest="30" WidthRequest="30"  />
+                            <Label Text="Pizza Hut" FontSize="17" TextColor="Black" Grid.Column="1"  />
+                        </Grid>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="starbucks.png" HeightRequest="30" WidthRequest="30"  />
+                            <Label Text="Starbucks" FontSize="17" TextColor="Black" Grid.Column="1"  />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="sonic.png" HeightRequest="30" WidthRequest="30"  />
+                            <Label Text="Sonic's" FontSize="17" TextColor="Black" Grid.Column="1"  />
+                        </Grid>
+
+                        <Grid RowDefinitions="auto,auto,auto">
+
+                            <Label FontAttributes="Bold,Italic" Text="Најавете се или регистрирајте се за да  " FontSize="20"  HorizontalOptions="Center">
+                            </Label>
+                            <Label Grid.Row="1" FontAttributes="Bold,Italic" Text="порачате" FontSize="20"  HorizontalOptions="Center">
+                            </Label>
+                            <Button  Grid.Row="2" Clicked="Button_Clicked"  Text="НАЈАВИ СЕ" Font="14" BackgroundColor="Green" TextColor="White" FontAttributes="Italic" CornerRadius="20" WidthRequest="120" HeightRequest="60"  HorizontalOptions="StartAndExpand" Margin="10,5,0,0"></Button>
+                            <Button  Grid.Row="2"  Clicked="Button_Clicked_1" Text="РЕГИСТРИРАЈ СЕ" Font="14" BackgroundColor="Green" TextColor="White" FontAttributes="Italic" CornerRadius="20" WidthRequest="120" HeightRequest="60"  HorizontalOptions="EndAndExpand" Margin="10,5,0,0"></Button>
+                        </Grid>
+
+
+                    </StackLayout>
+
+
+
+                </Grid>
+
+
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

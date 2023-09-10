@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="MobileApp.Pizzapage"
+              Title="Мени за Пици"
+             >
+    <ContentPage.BackgroundImageSource>
+
+        <FileImageSource File="pizzbg.jpg"/>
+
+    </ContentPage.BackgroundImageSource>
+   
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="LightSlateGray"/>
+            <Setter Property="BorderColor" Value="Aqua"/>
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="CornerRadius" Value="15"/>
+          
+        </Style>
+
+       
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="0,2"/>
+            <Setter Property="FontAttributes" Value="Italic"/>
+            <Setter Property="FontSize" Value="Medium"/>
+        </Style>
+
+        <Style x:Key="headerLabel" TargetType="Label">
+            <Setter Property="Margin" Value="0, 8"/>
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="Image">
+            <Setter Property="FlexLayout.Order" Value="-1"/>
+            <Setter Property="FlexLayout.AlignSelf" Value="Center"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Text" Value="ПОРАЧАЈ"/>
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="BackgroundColor" Value="Black"/>
+            <Setter Property="BorderRadius" Value="20"/>
+             
+            </Style>
+
+        </ResourceDictionary>
+
+
+        
+    
+    
+    </ContentPage.Resources>
+
+
+
+
+
+    <StackLayout InputTransparent="False">
+
+        <Frame CornerRadius="10" BorderColor="Green" BackgroundColor="White" Padding="10" Margin="10">
+            <Label x:Name="usernamelabel" FontSize="24" TextColor="Green"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   >
+                
+               
+            </Label>
+        </Frame>
+
+
+        <SearchBar TextColor="Black" PlaceholderColor="#CCCCCC"
+           BackgroundColor="#F5F5F5" CancelButtonColor="#FF0000"
+           FontSize="16" Placeholder="Search..."
+           TextChanged="SearchBar_TextChanged"></SearchBar>
+        
+
+        <ScrollView Orientation="Both" >
+
+            
+
+
+
+
+            <FlexLayout x:Name="pizzaFlexLayout" Wrap="Wrap">
+
+               
+
+
+
+
+                <Frame WidthRequest="300"
+                   HeightRequest="480"
+                        x:Name="CheesePizza"
+                    
+                   >
+                            
+
+                            <FlexLayout Direction="Column">
+                        <Label Text="Пица со кашкавал" VerticalOptions="CenterAndExpand"
+                           Style="{StaticResource headerLabel}" x:Name="CheesePica"/>
+                        <Label Text="Состојки :" />
+                        
+                        <Label Text="&#x2022; Тесто за пица" />
+                                <Label Text="&#x2022; Сос од домати" />
+                                <Label Text="&#x2022; Кашкавал" />
+                                <Label Text="&#x2022; Број на нарачка :5" x:Name="BROJ5Cheese" />
+                                <Label Text="&#x2022; Цена:300 ден" x:Name="cenacheese" />
+                                <Image Source="Cheesepica.jpeg" Aspect="Fill"
+                           WidthRequest="240"
+                           HeightRequest="170"/>
+                                <Label FlexLayout.Grow="1" />
+                        <Button Clicked="Button_Clicked"  IsEnabled="True"/>
+                            </FlexLayout>
+
+
+                        </Frame>
+
+
+                        <Frame  WidthRequest="300"
+                   HeightRequest="480"
+                                x:Name="VeggiePizza"
+                  
+                    >
+
+                            <FlexLayout  Direction="Column">
+                                <Label Text="Вегетерјанска пица" VerticalOptions="CenterAndExpand"
+                        Style="{StaticResource headerLabel}" x:Name="VeggiePica"/>
+
+                                <Label Text="Состојки :" />
+                                <Label Text="&#x2022; Свежи домати" />
+                                <Label Text="&#x2022; Кромид" />
+                                <Label Text="&#x2022; Модри патлиџани"/>
+                                <Label Text="&#x2022; Број на нарачка :6" x:Name="BROJ6Veggie" />
+                                <Label Text="&#x2022; Цена:280 ден" x:Name="cenaveggie"/>
+                                <Image Source="Veggiepica.jpeg" Aspect="Fill"
+                     WidthRequest="240"
+                     HeightRequest="170"/>
+                                <Label FlexLayout.Grow="1" />
+                        <Button Clicked="Button_Clicked_1" IsEnabled="True"/>
+                            </FlexLayout>
+                        </Frame>
+
+                        <Frame WidthRequest="300"
+                   HeightRequest="480"
+                x:Name="PepperoniPizza"
+                   >
+
+                            <FlexLayout Direction="Column">
+                        <Label Text="Пица со феферони" VerticalOptions="CenterAndExpand"
+                    Style="{StaticResource headerLabel}" x:Name="Peperonipica"/>
+
+                                <Label Text="Состојки :" />
+                                <Label Text="&#x2022; Мешавина од говедско и свинско месо" />
+                                <Label Text="&#x2022; Пиперки" />
+                                <Label Text="&#x2022; Чили во прав"/>
+                        <Label Text="&#x2022; Број на нарачка :7" x:Name="BROJ7Peperoni" />
+                                <Label Text="&#x2022; Цена:330 ден" />
+                                <Image Source="Peperonipica.jpeg" Aspect="Fill"
+                        WidthRequest="240"
+                        HeightRequest="170"/>
+                                <Label FlexLayout.Grow="1" />
+                                <Button Clicked="Button_Clicked_2"/>
+                            </FlexLayout>
+                        </Frame>
+
+
+                        <Frame WidthRequest="300"
+                   HeightRequest="480"
+                               x:Name="MargheritaPizza"
+                   
+                   >
+
+                            <FlexLayout Direction="Column">
+                        <Label Text="Пица Маргерита" VerticalOptions="CenterAndExpand"
+                         Style="{StaticResource headerLabel}" x:Name="Margatirapica"/>
+
+                                <Label Text="Состојки :" />
+                                <Label Text="&#x2022; Сос од домати" />
+                                <Label Text="&#x2022; Моцарела кашкавал" />
+                                <Label Text="&#x2022; Рендан пармезан"/>
+                                <Label Text="&#x2022; Број на нарачка :8" x:Name="BROJ8Margatira"/>
+                                <Label Text="&#x2022; Цена:340 ден" />
+                                <Image Source="Margaritapica.jpeg" Aspect="Fill"
+                        WidthRequest="240"
+                        HeightRequest="170"/>
+                                <Label FlexLayout.Grow="1" />
+                                <Button Clicked="Button_Clicked_3"/>
+                            </FlexLayout>
+                        </Frame>
+
+                        <Frame WidthRequest="300"
+                            HeightRequest="480"
+                            x:Name="BuffaloPizza"
+                   >
+
+                            <FlexLayout Direction="Column">
+                        <Label Text="Бафало пица" VerticalOptions="CenterAndExpand"
+                    Style="{StaticResource headerLabel}" x:Name="Buffalopica"/>
+
+                                <Label Text="Состојки :" />
+                                <Label Text="&#x2022; Пилешко од сос" />
+                                <Label Text="&#x2022; Моцарела кашкавал" />
+                                <Label Text="&#x2022; Црвен кромид"/>
+                                <Label Text="&#x2022; Број на нарачка :9" x:Name="BROJ9Buffalo" />
+                                <Label Text="&#x2022; Цена:360 ден" />
+                                <Image Source="Buffalopica.jpeg" Aspect="Fill"
+                        WidthRequest="240"
+                        HeightRequest="170"/>
+                                <Label FlexLayout.Grow="1" />
+                                <Button Clicked="Button_Clicked_4"/>
+                            </FlexLayout>
+                        </Frame>
+
+
+                        <Frame WidthRequest="300"
+                     HeightRequest="480"
+                   x:Name="BBQChickenPizza"
+                   >
+
+                            <FlexLayout Direction="Column">
+                        <Label Text="BBQ пилешка пица" VerticalOptions="CenterAndExpand"
+                    Style="{StaticResource headerLabel}" x:Name="bbqlchickenpica"/>
+
+                                <Label Text="Состојки :" />
+                                <Label Text="&#x2022; BBQ сос" />
+                                <Label Text="&#x2022; Моцарела кашкавал" />
+                                <Label Text="&#x2022; Пилешко"/>
+                                 <Label Text="&#x2022; Број на нарачка :10" x:Name="BROJ10bbqchicken"/>
+                                <Label Text="&#x2022; Цена:350 ден" />
+                                <Image Source="bbgpica.jpeg" Aspect="Fill"
+                    WidthRequest="240"
+                     HeightRequest="170"/>
+                                <Label FlexLayout.Grow="1" />
+                                <Button Clicked="Button_Clicked_5"/>
+                            </FlexLayout>
+                        </Frame>
+
+
+                
+
+
+
+
+
+        </FlexLayout>
+  
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+    </ScrollView>
+
+    </StackLayout>
+
+
+
+
+
+
+
+
+
+
+
+</ContentPage>

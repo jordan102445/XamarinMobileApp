@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Delicious_app.Meat"
+              Title="Мени за Месо"
+             >
+
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="meatwal.jpg" />
+    </ContentPage.BackgroundImageSource>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#988558"/>
+                <Setter Property="BorderColor" Value="#814141"/>
+                <Setter Property="Margin" Value="20" />
+                <Setter Property="CornerRadius" Value="15" />
+
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="0,2" />
+                <Setter Property="FontAttributes" Value="Italic"/>
+                <Setter Property="FontSize" Value="Medium"/>
+
+            </Style>
+
+            <Style x:Key="headerLabel" TargetType="Label">
+
+                <Setter Property="Margin" Value="0,8"/>
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+
+            </Style>
+
+            <Style TargetType="Image" >
+                <Setter Property="FlexLayout.Order" Value="-1"/>
+                <Setter Property="FlexLayout.AlignSelf" Value="Center"/>
+
+            </Style>
+
+            <Style TargetType="Button">
+            <Setter Property="Text" Value="ПОРАЧАЈ"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="Black"/>
+                <Setter Property="BorderRadius" Value="20"/>
+            </Style>
+
+
+        </ResourceDictionary>
+        
+        
+    </ContentPage.Resources>
+
+    <StackLayout>
+
+        <Frame CornerRadius="10" BorderColor="Green" BackgroundColor="White" Padding="10" Margin="10">
+            <Label x:Name="usernamelabel" FontSize="24" TextColor="Green"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+           >
+
+
+            </Label>
+        </Frame>
+        <SearchBar TextColor="Black" PlaceholderColor="#CCCCCC"
+            BackgroundColor="#F5F5F5" CancelButtonColor="#FF0000"
+             FontSize="16" Placeholder="Search..."
+                TextChanged="SearchBar_TextChanged"></SearchBar>
+
+        <ScrollView Orientation="Both" >
+
+
+
+
+            <FlexLayout Wrap="Wrap" x:Name="MeatOptionFlexLayOut">
+
+
+                <Frame WidthRequest="300"
+                   HeightRequest="480"
+                       x:Name="Steak">
+
+                    <FlexLayout Direction="Column">
+                        <Label Text="Стек" VerticalOptions="CenterAndExpand"
+                    Style="{StaticResource headerLabel}" x:Name="Stek"/>
+                        <Label Text="Состојки :" />
+                        <Label Text="&#x2022; Ориз" />
+                        <Label Text="&#x2022; Стек" />
+                        <Label Text="&#x2022; исушен кокос" />
+                        <Label Text="&#x2022; Број на порачка : 11" x:Name="Broj11steak" />
+                        <Label Text="&#x2022; Цена:340 ден" />
+                        <Image Source="stekoriz.jpg" Aspect="Fill"
+                    WidthRequest="240"
+                    HeightRequest="170"/>
+                        <Label FlexLayout.Grow="1" />
+                        <Button Clicked="Button_Clicked"/>
+                    </FlexLayout>
+
+
+                </Frame>
+
+
+
+
+                <Frame WidthRequest="300"
+                        HeightRequest="480"
+                       x:Name="Baconwitheggs">
+
+                    <FlexLayout Direction="Column">
+                        <Label Text="Сланина со јајца" VerticalOptions="CenterAndExpand"
+            Style="{StaticResource headerLabel}" x:Name="Bacon"/>
+                        <Label Text="Состојки :" />
+                        <Label Text="&#x2022; Сланина" />
+                        <Label Text="&#x2022; Јајца" />
+                        <Label Text="&#x2022; Пржени пиперки" />
+                        <Label Text="&#x2022; Број на порачка : 12" x:Name="Broj12bacon" />
+                        <Label Text="&#x2022; Цена:240 ден" />
+                        <Image Source="slanina.jpg" Aspect="Fill"
+            WidthRequest="240"
+            HeightRequest="170"/>
+                        <Label FlexLayout.Grow="1" />
+                        <Button Clicked="Button_Clicked_1"/>
+                    </FlexLayout>
+
+
+                </Frame>
+
+
+                <Frame WidthRequest="300"
+            HeightRequest="480"
+                       x:Name="Ribswithbarbecuesauce">
+
+                    <FlexLayout Direction="Column">
+                        <Label Text="Ребра со сос за скара" VerticalOptions="CenterAndExpand"
+                    Style="{StaticResource headerLabel}" x:Name="ribs"/>
+                        <Label Text="Состојки :" />
+                        <Label Text="&#x2022; Сланина" />
+                        <Label Text="&#x2022; Јајца" />
+                        <Label Text="&#x2022; Пржени пиперки" />
+                        <Label Text="&#x2022; Број на порачка : 13" x:Name="Broj13ribs" />
+                        <Label Text="&#x2022; Цена:360 ден" />
+                        <Image Source="ribs.jpg" Aspect="Fill"
+                    WidthRequest="240"
+                    HeightRequest="170"/>
+                        <Label FlexLayout.Grow="1" />
+                        <Button Clicked="Button_Clicked_2"/>
+                    </FlexLayout>
+
+
+                </Frame>
+
+
+                <Frame WidthRequest="300"
+                    HeightRequest="480"
+                       x:Name="Hamwithpineapple">
+
+                    <FlexLayout Direction="Column">
+                        <Label Text="Шунка со ананас" VerticalOptions="CenterAndExpand"
+                        Style="{StaticResource headerLabel}" x:Name="Ham"/>
+                        <Label Text="Состојки :" />
+                        <Label Text="&#x2022; Шунка" />
+                        <Label Text="&#x2022; Ананас" />
+                        <Label Text="&#x2022; Лута пиперка" />
+                        <Label Text="&#x2022; Број на порачка : 14" x:Name="Broj14ham" />
+                        <Label Text="&#x2022; Цена:270 ден" />
+                        <Image Source="ham.jpg" Aspect="Fill"
+                         WidthRequest="240"
+                            HeightRequest="170"/>
+                        <Label FlexLayout.Grow="1" />
+                        <Button Clicked="Button_Clicked_3"/>
+                    </FlexLayout>
+
+
+                </Frame>
+            </FlexLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Delicious_app.Dessert"
+              Title="Мени за десерти"
+             >
+
+
+
+    <ContentPage.BackgroundImageSource>
+
+        <FileImageSource File="dessert.jpg"/>
+
+    </ContentPage.BackgroundImageSource>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#C19A6B"/>
+                <Setter Property="BorderColor" Value="Aqua"/>
+                <Setter Property="Margin" Value="20"/>
+                <Setter Property="CornerRadius" Value="15"/>
+
+            </Style>
+
+
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="0,2"/>
+                <Setter Property="FontAttributes" Value="Italic"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+
+            <Style x:Key="headerLabel" TargetType="Label">
+                <Setter Property="Margin" Value="0, 8"/>
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+            <Style TargetType="Image">
+                <Setter Property="FlexLayout.Order" Value="-1"/>
+                <Setter Property="FlexLayout.AlignSelf" Value="Center"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Text" Value="ПОРАЧАЈ"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="Black"/>
+                <Setter Property="BorderRadius" Value="20"/>
+
+            </Style>
+
+        </ResourceDictionary>
+
+
+
+
+
+    </ContentPage.Resources>
+
+
+
+    <StackLayout>
+
+        <Frame CornerRadius="10" BorderColor="Green" BackgroundColor="White" Padding="10" Margin="10">
+            <Label x:Name="usernamelabel" FontSize="24" TextColor="Green"
+    HorizontalTextAlignment="Center"
+    VerticalTextAlignment="Center"
+    >
+
+
+            </Label>
+        </Frame>
+
+
+        <SearchBar TextColor="Black" PlaceholderColor="#CCCCCC"
+ BackgroundColor="#F5F5F5" CancelButtonColor="#FF0000"
+     FontSize="16" Placeholder="Search..."
+     TextChanged="SearchBar_TextChanged"></SearchBar>
+
+
+
+        <ScrollView Orientation="Both" >
+
+            <FlexLayout Wrap="Wrap" x:Name="DessertFlexLayout">
+
+
+            <Frame WidthRequest="300"
+               HeightRequest="480"
+                   x:Name="Applepie"
+                   >
+
+                <FlexLayout Direction="Column">
+                        <Label Text="Пита од јаболка" VerticalOptions="CenterAndExpand"
+                       Style="{StaticResource headerLabel}" x:Name="applepie"/>
+                    <Label Text="Видови :" />
+                    <RadioButton Content="&#x2022; Чоколадна" x:Name="Чоколадна"/>
+                    <RadioButton Content="&#x2022; Овошна" x:Name="Овошна" />
+                    <RadioButton Content="&#x2022; Солена" x:Name="Солена" />
+                    <Label Text="&#x2022; Број на нарачка :15" x:Name="BROJ15applepie" />
+                    <Label Text="&#x2022; Цена:140 ден" />
+                    <Image Source="applepie.jpg" Aspect="Fill"
+                       WidthRequest="240"
+                       HeightRequest="170"/>
+                    <Label FlexLayout.Grow="1" />
+                    <Button Clicked="Button_Clicked"/>
+                </FlexLayout>
+
+
+            </Frame>
+
+            <Frame WidthRequest="300"
+                HeightRequest="480"
+                   x:Name="Cheesecake"
+                   >
+
+                <FlexLayout Direction="Column">
+                        <Label Text="Чизкејк" VerticalOptions="CenterAndExpand"
+           Style="{StaticResource headerLabel}" x:Name="cheesecake"/>
+                    <Label Text="Видови :" />
+                    <RadioButton Content="&#x2022; Ириш cheescake " x:Name="iris"/>
+                        <RadioButton Content="&#x2022; Чоколадна" x:Name="Cokoladnaa" />
+                        <RadioButton Content="&#x2022; Вегетерјанска " x:Name="Vegeterjanska"/>
+                        <Label Text="&#x2022; Број на нарачка :16" x:Name="BROJ16cheese" />
+                        <Label Text="&#x2022; Цена:120 ден" />
+                    <Image Source="cheesecake.jpg" Aspect="Fill"
+           WidthRequest="240"
+           HeightRequest="170"/>
+                    <Label FlexLayout.Grow="1" />
+                    <Button Clicked="Button_Clicked_1"/>
+                </FlexLayout>
+
+
+            </Frame>
+
+
+
+
+            <Frame WidthRequest="300"
+                    HeightRequest="480"
+                   x:Name="Baklava"
+                   >
+
+                <FlexLayout Direction="Column">
+                        <Label Text="Баклава" VerticalOptions="CenterAndExpand"
+                    Style="{StaticResource headerLabel}" x:Name="baklavaa"/>
+                    <Label Text="Видови :" />
+                    <RadioButton Content="&#x2022; Чоколадна" x:Name="cokoladnabaklava"/>
+                    <RadioButton Content="&#x2022; Baklava so фстци" x:Name="fstci"/>
+                    <RadioButton Content="&#x2022; Солена" x:Name="solena" />
+                     <Label Text="&#x2022; Број на нарачка :17" x:Name="BROJ17baklava" />
+                     <Label Text="&#x2022; Цена:90 ден" />
+                    <Image Source="Baklava.jpg" Aspect="Fill"
+           WidthRequest="240"
+           HeightRequest="170"/>
+                    <Label FlexLayout.Grow="1" />
+                    <Button Clicked="Button_Clicked_2"/>
+                </FlexLayout>
+
+
+            </Frame>
+
+
+            <Frame WidthRequest="300"
+                   HeightRequest="480"
+                   x:Name="Cake"
+                   >
+
+                <FlexLayout Direction="Column">
+                    <Label Text="Торта" VerticalOptions="CenterAndExpand"
+           Style="{StaticResource headerLabel}" x:Name="cakee"/>
+                    <Label Text="Видови :" />
+                    <RadioButton Content="&#x2022; Чоколадна" x:Name="cokoladnatorta"/>
+                    <RadioButton Content="&#x2022; Овошна" x:Name="ovosna" />
+                    <RadioButton Content="&#x2022; Орео" x:Name="oreotorta" />
+                        <Label Text="&#x2022; Број на нарачка :18" x:Name="BROJ18cake" />
+                        <Label Text="&#x2022; Цена:140 ден" />
+                    <Image Source="Cake.jpg" Aspect="Fill"
+           WidthRequest="240"
+           HeightRequest="170"/>
+                    <Label FlexLayout.Grow="1" />
+                    <Button Clicked="Button_Clicked_3"/>
+                </FlexLayout>
+
+
+            </Frame>
+
+            <Frame WidthRequest="300"
+             HeightRequest="480"
+                   x:Name="Icecream"
+                   >
+
+                <FlexLayout Direction="Column">
+                    <Label Text="Сладолед" VerticalOptions="CenterAndExpand"
+           Style="{StaticResource headerLabel}" x:Name="icecream"/>
+                    <Label Text="Видови :" />
+                    <RadioButton Content="&#x2022; Чоколадо" x:Name="cokoladensladolen"/>
+                    <RadioButton Content="&#x2022; Овошен"  x:Name="ovosensladolen"/>
+                    <RadioButton Content="&#x2022; Ванила"  x:Name="vanilasladolen"/>
+                        <Label Text="&#x2022; Број на нарачка :19" x:Name="BROJ19icecream" />
+                        <Label Text="&#x2022; Цена:100 ден" />
+                    <Image Source="icecream.jpg" Aspect="Fill"
+           WidthRequest="240"
+           HeightRequest="170"/>
+                    <Label FlexLayout.Grow="1" />
+                    <Button Clicked="Button_Clicked_4"/>
+                </FlexLayout>
+
+
+            </Frame>
+
+
+            <Frame WidthRequest="300"
+                    HeightRequest="480" x:Name="Cookies"
+                   >
+
+                <FlexLayout Direction="Column">
+                        <Label Text="Колачиња" VerticalOptions="CenterAndExpand"
+           Style="{StaticResource headerLabel}" x:Name="cookiess"/>
+                    <Label Text="Видови :" />
+                    <RadioButton Content="&#x2022; Чоколадо" x:Name="cokoladnicookies"/>
+                    <RadioButton Content="&#x2022; Вишна" x:Name="visnacookies"/>
+                    <RadioButton Content="&#x2022; Орео" x:Name="oreocookies" />
+                        <Label Text="&#x2022; Број на нарачка :20" x:Name="BROJ20cookies" />
+                        <Label Text="&#x2022; Цена:60 ден" />
+                    <Image Source="cookies.jpeg" Aspect="Fill"
+           WidthRequest="240"
+           HeightRequest="170"/>
+                    <Label FlexLayout.Grow="1" />
+                    <Button Clicked="Button_Clicked_5"/>
+                </FlexLayout>
+
+
+            </Frame>
+
+
+
+
+        </FlexLayout>
+
+
+
+        </ScrollView>
+
+    </StackLayout>
+</ContentPage>

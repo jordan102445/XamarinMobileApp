@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Delicious_app.Burger"
+              Title="Мени за бургери"
+             >
+    <ContentPage.BackgroundImageSource>
+
+        <FileImageSource File="burgerwal.jpg"/>
+
+    </ContentPage.BackgroundImageSource>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#D27D2D"/>
+                <Setter Property="BorderColor" Value="Aqua"/>
+                <Setter Property="Margin" Value="20"/>
+                <Setter Property="CornerRadius" Value="15"/>
+
+            </Style>
+
+
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="0,2"/>
+                <Setter Property="FontAttributes" Value="Italic"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+
+            <Style x:Key="headerLabel" TargetType="Label">
+                <Setter Property="Margin" Value="0, 8"/>
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+            <Style TargetType="Image">
+                <Setter Property="FlexLayout.Order" Value="-1"/>
+                <Setter Property="FlexLayout.AlignSelf" Value="Center"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Text" Value="ПОРАЧАЈ"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="Black"/>
+                <Setter Property="BorderRadius" Value="20"/>
+
+            </Style>
+
+        </ResourceDictionary>
+
+
+
+
+
+    </ContentPage.Resources>
+
+
+
+
+
+
+    <StackLayout>
+
+
+        <Frame CornerRadius="10" BorderColor="Green" BackgroundColor="White" Padding="10" Margin="10">
+            <Label x:Name="usernamelabel" FontSize="24" TextColor="Green"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+           >
+
+
+            </Label>
+        </Frame>
+
+
+           <SearchBar TextColor="Black" PlaceholderColor="#CCCCCC"
+                      BackgroundColor="#F5F5F5" CancelButtonColor="#FF0000"
+                      FontSize="16" Placeholder="Search..."
+                      TextChanged="SeacrhBar_TextChanged"></SearchBar>
+
+        <ScrollView Orientation="Both" >
+
+
+
+
+            <FlexLayout Wrap="Wrap" x:Name="BugrgerFlexOut">
+
+
+                <Frame WidthRequest="300"
+               HeightRequest="480"
+                   x:Name="Hamburger"
+                   >
+
+                    <FlexLayout Direction="Column">
+                        <Label Text="Хамбургер" VerticalOptions="CenterAndExpand"
+                       Style="{StaticResource headerLabel}" x:Name="Hamburgeer"/>
+                        <Label Text="Состојки :" />
+                        <Label Text="&#x2022; Крaставици" />
+                        <Label Text="&#x2022; Месо" />
+                        <Label Text="&#x2022; Кечап" />
+                        <Label Text="&#x2022; Лук" />
+                        <Label Text="&#x2022; Број на порачка : 21" x:Name="Broj21hamburger"/>
+                        <Label Text="&#x2022; Цена:350 ден" />
+                        <Image Source="hamburger.jpeg" Aspect="Fill"
+                       WidthRequest="240"
+                       HeightRequest="170"/>
+                        <Label FlexLayout.Grow="1" />
+                        <Button Clicked="Button_Clicked"/>
+                    </FlexLayout>
+
+
+                </Frame>
+
+
+                <Frame WidthRequest="300"
+               HeightRequest="480"
+                   x:Name="VeggieBurger"
+                   >
+
+                    <FlexLayout  Direction="Column">
+                        <Label Text="Вегетерјански бургер" VerticalOptions="CenterAndExpand"
+                    Style="{StaticResource headerLabel}" x:Name="Veggieburger"/>
+
+                        <Label Text="Состојки :" />
+                        <Label Text="&#x2022; Лук" />
+                        <Label Text="&#x2022; Кашкавал"/>
+                        <Label Text="&#x2022; Број на порачка : 22" x:Name="Broj22veggieburger" />
+                        <Label Text="&#x2022; Цена:280 ден" />
+                        <Image Source="veggie.jpeg" Aspect="Fill"
+                 WidthRequest="240"
+                 HeightRequest="170"/>
+                        <Label FlexLayout.Grow="1" />
+                        <Button Clicked="Button_Clicked_1"/>
+                    </FlexLayout>
+                </Frame>
+
+                <Frame WidthRequest="300"
+               HeightRequest="480"
+                   x:Name="Cheeseburger"
+                   >
+
+                    <FlexLayout Direction="Column">
+                        <Label Text="Чизбургер" VerticalOptions="CenterAndExpand"
+                Style="{StaticResource headerLabel}" x:Name="Cheeseburgerr" />
+
+                        <Label Text="Состојки :" />
+                        <Label Text="&#x2022; Крaставици" />
+                        <Label Text="&#x2022; Месо" />
+                        <Label Text="&#x2022; Кечап" />
+                        <Label Text="&#x2022; Kaшкавал" />
+                        <Label Text="&#x2022; Број на порачка : 23" x:Name="Broj23cheeseburger" />
+                        <Label Text="&#x2022; Цена:380 ден" />
+                        <Image Source="cheeseburger.jpeg" Aspect="Fill"
+                    WidthRequest="240"
+                    HeightRequest="170"/>
+                        <Label FlexLayout.Grow="1" />
+                        <Button Clicked="Button_Clicked_2"/>
+                    </FlexLayout>
+                </Frame>
+
+
+                <Frame WidthRequest="300"
+               HeightRequest="480"
+                   x:Name="Chickenburger"
+                   >
+
+                    <FlexLayout Direction="Column">
+                        <Label Text="Чикенбургер" VerticalOptions="CenterAndExpand"
+                     Style="{StaticResource headerLabel}" x:Name="Chickenburgerr"/>
+
+                        <Label Text="Состојки :" />
+                        <Label Text="&#x2022; Крцкаво пилешко месо" />
+                        <Label Text="&#x2022; Кашкавал" />
+                        <Label Text="&#x2022; Лук"/>
+                        <Label Text="&#x2022; Кечап"/>
+                        <Label Text="&#x2022; Авокадо"/>
+                        <Label Text="&#x2022; Број на порачка : 24" x:Name="Broj24chickenburger" />
+                        <Label Text="&#x2022; Цена:340 ден" />
+                        <Image Source="chickenburger.jpeg" Aspect="Fill"
+                    WidthRequest="240"
+                    HeightRequest="170"/>
+                        <Label FlexLayout.Grow="1" />
+                        <Button Clicked="Button_Clicked_3"/>
+                    </FlexLayout>
+                </Frame>
+
+                <Frame WidthRequest="300"
+                HeightRequest="480"
+                   x:Name="Beanburger"
+                   >
+
+                    <FlexLayout Direction="Column">
+                        <Label Text="Бинбургер" VerticalOptions="CenterAndExpand"
+                Style="{StaticResource headerLabel}" x:Name="Beanburgerr"/>
+
+                        <Label Text="Состојки :" />
+                        <Label Text="&#x2022; Месо од црн граф " />
+                        <Label Text="&#x2022; Лук + пипер" />
+                        <Label Text="&#x2022; Кашкавал"/>
+                        <Label Text="&#x2022; Број на порачка : 25" x:Name="Broj25beanburger" />
+                        <Label Text="&#x2022; Цена:400 ден" />
+                        <Image Source="beanburger.jpeg" Aspect="Fill"
+                    WidthRequest="240"
+                    HeightRequest="170"/>
+                        <Label FlexLayout.Grow="1" />
+                        <Button Clicked="Button_Clicked_4"/>
+                    </FlexLayout>
+                </Frame>
+
+
+                <Frame WidthRequest="300"
+                 HeightRequest="480"
+                   x:Name="Riceburger"
+                   >
+
+                    <FlexLayout Direction="Column">
+                        <Label Text="Рајсбургер" VerticalOptions="CenterAndExpand"
+                Style="{StaticResource headerLabel}" x:Name="riceburgerr"/>
+
+                        <Label Text="Состојки :" />
+                        <Label Text="&#x2022; Ориз" />
+                        <Label Text="&#x2022; Месо" />
+                        <Label Text="&#x2022; Јајца"/>
+                        <Label Text="&#x2022; Број на порачка : 26" x:Name="Broj26riceburger" />
+                        <Label Text="&#x2022; Цена:380 ден" />
+                        <Image Source="riceburger.jpeg" Aspect="Fill"
+                WidthRequest="240"
+                 HeightRequest="170"/>
+                        <Label FlexLayout.Grow="1" />
+                        <Button Clicked="Button_Clicked_5"/>
+                    </FlexLayout>
+                </Frame>
+
+
+
+
+
+            </FlexLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </ScrollView>
+
+    </StackLayout>
+</ContentPage>

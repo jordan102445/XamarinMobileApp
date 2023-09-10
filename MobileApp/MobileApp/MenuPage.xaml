@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:MobileApp"
+             Title="Menu"
+             x:Class="MobileApp.MenuPage">
+
+
+    <StackLayout Orientation="Horizontal"  Padding="10">
+
+        <ListView x:Name="listview" x:FieldModifier="public">
+
+            <ListView.ItemsSource>
+
+                <x:Array Type="{x:Type local:ItemPage}">
+                    <local:ItemPage Naslov ="Дома" Iconi="Home.png" Target="{x:Type local:ShowPage}"/>
+                    <local:ItemPage Naslov ="За нас" Iconi="Aboutus.png" Target="{x:Type local:ShowPage}"/>
+                    <local:ItemPage Naslov ="Логирај се" Iconi="Login.png" Target="{x:Type local:Login}"/>
+                    <local:ItemPage Naslov ="Регистрирај се" Iconi="Register.png" Target="{x:Type local:Register}"/>
+                    <local:ItemPage Naslov ="Контрактирајте не" Iconi="Contact.png" Target="{x:Type local:Contact}"/>
+            
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="{Binding Iconi}"/>
+                            <Label Grid.Column="1"  FontSize="Medium" Text="{Binding Naslov}"/>
+
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+
+
+
+
+    </StackLayout>
+
+</ContentPage> 
